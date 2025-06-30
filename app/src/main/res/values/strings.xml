@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">BookBox</string>
+    <string name="action_preferences">Preferências</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Book Box</string>
+    <string name="profile_fragment_label">Perfil</string>
+    <string name="about_fragment_label">Sobre</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="description">""</string>
+
+    <string name="profile_title">Perfil do Usuário</string>
+    <string name="user_name">Usuário BookBox</string>
+    <string name="user_email">usuario@bookbox.com</string>
+    <string name="settings_title">Configurações</string>
+    <string name="preferences">Preferências</string>
+    <string name="notifications">Notificações</string>
+    <string name="privacy">Privacidade</string>
+    <string name="about">Sobre</string>
+    <string name="help">Ajuda</string>
+    <string name="clear_description">Limpar descrição</string>
+    <string name="logout">Sair</string>
+
+    <string name="preferences_title">Preferências</string>
+    <string name="theme_title">Tema</string>
+    <string name="theme_default">Padrão</string>
+    <string name="theme_dark">Escuro</string>
+    <string name="accessibility_mode">Modo de Acessibilidade</string>
+    <string name="accessibility_mode_description">Aumenta o tamanho da fonte para melhor legibilidade</string>
+
+    <string name="about_title">Sobre o BookBox</string>
+    <string name="app_version">Versão 1.0.0</string>
+    <string name="license_title">Licença</string>
+    <string name="license_text">Copyright © 2024 BookBox. Todos os direitos reservados.</string>
+    <string name="contact_title">Contato</string>
+    <string name="contact_text">contato@bookbox.com</string>
+
+    <string-array name="book_titles">
+        <item>Admirável Mundo Novo</item>
+        <item>Fahrenheit 451</item>
+        <item>O Apanhador no Campo de Centeio</item>
+        <item>O Sol é para todos</item>
+        <item>O Deus das Moscas</item>
+        <item>Crime e Castigo</item>
+        <item>O Grande Gatsby</item>
+        <item>1984</item>
+        <item>O Conto da Aia</item>
+        <item>A Revolução dos Bichos</item>
+    </string-array>
+
+    <string-array name="book_descriptions">
+        <item>Um romance distópico que retrata uma sociedade futurista onde as pessoas são condicionadas desde o nascimento para ocupar posições específicas na sociedade. O livro explora temas como controle social, tecnologia e a natureza humana.</item>
+        <item>Em um futuro onde os livros são proibidos e queimados, um bombeiro começa a questionar sua função na sociedade. Este clássico da ficção científica aborda temas como censura, conhecimento e a importância da literatura.</item>
+        <item>Narrado por Holden Caulfield, um adolescente que foi expulso de várias escolas, o livro explora a alienação, a perda da inocência e a busca por autenticidade em um mundo que parece falso e hipócrita.</item>
+        <item>Ambientado no sul dos Estados Unidos durante a década de 1930, o livro narra a história de um advogado que defende um homem negro acusado de um crime que não cometeu, enfrentando o racismo e a injustiça.</item>
+        <item>Um grupo de meninos britânicos fica preso em uma ilha deserta após um acidente de avião. Sem adultos, eles tentam estabelecer uma sociedade, mas a civilização rapidamente se desintegra, revelando a natureza selvagem do ser humano.</item>
+        <item>Um dos maiores romances da literatura russa, o livro segue Raskolnikov, um ex-estudante pobre que comete um assassinato e lida com a culpa e o remorso. Uma exploração profunda da psicologia humana e da moralidade.</item>
+        <item>Ambientado na década de 1920, o livro narra a história de Jay Gatsby, um milionário misterioso, e sua obsessão por Daisy Buchanan. Uma crítica ao sonho americano e à decadência moral da sociedade.</item>
+        <item>Um dos romances distópicos mais influentes, o livro retrata uma sociedade totalitária onde o governo controla todos os aspectos da vida dos cidadãos, incluindo seus pensamentos. Uma reflexão sobre poder, controle e liberdade.</item>
+        <item>Em um futuro distópico, uma teocracia totalitária transformou os Estados Unidos em Gilead, onde as mulheres férteis são forçadas a servir como \'aias\' para reprodução. Uma crítica poderosa sobre opressão, poder e resistência.</item>
+        <item>Uma fábula política que narra a revolução dos animais de uma fazenda contra seus donos humanos, apenas para verem sua própria revolução ser corrompida pelo poder. Uma crítica à corrupção do poder e à natureza humana.</item>
+    </string-array>
+</resources>

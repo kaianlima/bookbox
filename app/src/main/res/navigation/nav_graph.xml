@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.bookbox.view.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_FirstFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_AddBookFragment"
+            app:destination="@id/AddBookFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_ManageBooksFragment"
+            app:destination="@id/ManageBooksFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_BookDetailsFragment"
+            app:destination="@id/BookDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ProfileFragment"
+        android:name="com.example.bookbox.view.ProfileFragment"
+        android:label="@string/profile_fragment_label"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_ProfileFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_ProfileFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+        <action
+            android:id="@+id/action_ProfileFragment_to_ManageBooksFragment"
+            app:destination="@id/ManageBooksFragment" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/AboutFragment"
+        android:name="com.example.bookbox.view.AboutFragment"
+        android:label="@string/about_fragment_label"
+        tools:layout="@layout/fragment_about">
+        <action
+            android:id="@+id/action_AboutFragment_to_ProfileFragment"
+            app:destination="@id/ProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/PreferencesFragment"
+        android:name="com.example.bookbox.view.PreferencesFragment"
+        android:label="@string/preferences_title"
+        tools:layout="@layout/fragment_preferences">
+        <action
+            android:id="@+id/action_PreferencesFragment_to_ProfileFragment"
+            app:destination="@id/ProfileFragment" />
+        <action
+            android:id="@+id/action_PreferencesFragment_to_AddBookFragment"
+            app:destination="@id/AddBookFragment" />
+        <action
+            android:id="@+id/action_PreferencesFragment_to_ManageBooksFragment"
+            app:destination="@id/ManageBooksFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.example.bookbox.view.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_LoginFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AddBookFragment"
+        android:name="com.example.bookbox.view.AddBookFragment"
+        android:label="Adicionar Livro"
+        tools:layout="@layout/fragment_add_book">
+    </fragment>
+
+    <fragment
+        android:id="@+id/ManageBooksFragment"
+        android:name="com.example.bookbox.view.ManageBooksFragment"
+        android:label="Gerenciar Livros"
+        tools:layout="@layout/fragment_manage_books">
+        <action
+            android:id="@+id/action_ManageBooksFragment_to_AddBookFragment"
+            app:destination="@id/AddBookFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/BookDetailsFragment"
+        android:name="com.example.bookbox.view.BookDetailsFragment"
+        android:label="Detalhes do Livro"
+        tools:layout="@layout/fragment_book_details">
+        <argument
+            android:name="bookId"
+            app:argType="integer" />
+    </fragment>
+</navigation>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?android:windowBackground"
+    tools:context=".view.FirstFragment">
+
+    <!-- Header com Busca e Filtros -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Buscar por título ou autor..."
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="8dp"
+            android:padding="12dp"
+            android:background="?cardBackgroundColor"
+            android:elevation="2dp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <Spinner
+                android:id="@+id/spinnerGenre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerReadStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/read_status_options"/>
+
+        </LinearLayout>
+
+        <!-- Botão Adicionar Livro (apenas para admin) -->
+        <Button
+            android:id="@+id/buttonAddBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adicionar Novo Livro"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.Material3.Button.TonalButton"/>
+
+    </LinearLayout>
+
+    <!-- Grid de Livros - Ocupa todo o espaço restante -->
+    <GridView
+        android:id="@+id/grid1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:horizontalSpacing="8dp"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="8dp"
+        android:scrollbars="vertical" />
+
+    <!-- Container de Detalhes do Livro - Sobrepõe quando necessário -->
+    <FrameLayout
+        android:id="@+id/descriptionContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:orientation="vertical"
+                android:background="?cardBackgroundColor"
+                android:elevation="4dp"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/textViewBookTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="?android:textColorPrimary"
+                    android:padding="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/textViewBookAuthor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:textStyle="italic"
+                        android:textColor="?android:textColorSecondary" />
+
+                    <TextView
+                        android:id="@+id/textViewBookYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="?android:textColorSecondary" />
+
+                </LinearLayout>
+
+                <!-- Sistema de Avaliação -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sua avaliação:"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp"/>
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:stepSize="1.0"
+                        android:layout_marginBottom="8dp"/>
+
+                    <TextView
+                        android:id="@+id/textViewAverageRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0 (0 avaliações)"
+                        android:textSize="12sp"
+                        android:textColor="?android:textColorSecondary"/>
+
+                </LinearLayout>
+
+                <!-- Botão Marcar como Lido -->
+                <Button
+                    android:id="@+id/buttonMarkAsRead"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Marcar como lido"
+                    android:layout_marginBottom="8dp"
+                    style="@style/Widget.Material3.Button.TonalButton"/>
+
+                <TextView
+                    android:id="@+id/textViewDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="?android:textColorPrimary" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ImageButton
+            android:id="@+id/buttonClearDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/baseline_close_24"
+            android:padding="8dp"
+            android:layout_margin="16dp"
+            android:contentDescription="Fechar detalhes" />
+
+    </FrameLayout>
+
+</LinearLayout>

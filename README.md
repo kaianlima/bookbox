@@ -16,9 +16,15 @@ Existem dois tipo de usuários: o comum, com acesso a quase a todas funcionalida
 
 - Cadastro e login de usuários
 
+- Usuário com avatar adicionado pela câmera
+
 - Busca de livros por título
 
 - Cadastro de livros
+
+- Notificação ao cadastrar novo livro
+
+- Livro com imagem adicionada pela galeria ou câmera
 
 - Página detalhada de cada livro
 
@@ -28,7 +34,7 @@ Existem dois tipo de usuários: o comum, com acesso a quase a todas funcionalida
 
 - Perfil de usuário com histórico de leitura
 
-- Rankings por gênero e avaliação
+- Filtro por título, gênero e lido.
 
 ### REQUISITOS NÃO FUNCIONAIS
  
@@ -37,3 +43,5 @@ Existem dois tipo de usuários: o comum, com acesso a quase a todas funcionalida
 - Design responsivo e intuitivo
 
 - Modo noturno
+
+- Room DB

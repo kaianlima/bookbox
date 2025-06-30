@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="theme_options">
+        <item>Padrão</item>
+        <item>Escuro</item>
+    </string-array>
+    
+    <string-array name="read_status_options">
+        <item>Todos</item>
+        <item>Lidos</item>
+        <item>Não lidos</item>
+    </string-array>
+    
+    <string-array name="genre_options">
+        <item>Ficção Científica</item>
+        <item>Drama</item>
+        <item>Romance</item>
+        <item>Aventura</item>
+        <item>Fábula</item>
+        <item>Fantasia</item>
+        <item>Terror</item>
+        <item>Comédia</item>
+        <item>Biografia</item>
+        <item>História</item>
+        <item>Não ficção</item>
+        <item>Outro</item>
+    </string-array>
+</resources> 
